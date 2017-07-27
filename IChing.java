@@ -40,8 +40,6 @@ static boolean done = false;
 	do{//print hexagram; if changing line received, use methods to change values and print
 		if(first != true){
 			System.out.println("First Hexagram:");
-			//trigram2.setHexagram();
-			//System.out.println(trigram1.getCount() + trigram2.getHexagramCount());
 			Hexagram hexagram1 = new Hexagram(trigram1.getCount(), trigram2.getCount());
 			hexagram1.getHexagram();
 	}
@@ -82,8 +80,6 @@ Trigram trigram3 = new Trigram(line[4].getTao(), line[5].getTao(), line[6].getTa
 trigram3.getTrigramLine();
 System.out.println("\n\nSecond Trigram after change:");
 Trigram trigram4 = new Trigram(line[1].getTao(), line[2].getTao(), line[3].getTao());
-//trigram4.setHexagram();
-//trigram4.getHexagramCount();
 trigram4.getTrigramLine();
 Hexagram hexagram2 = new Hexagram(trigram3.getCount(), trigram4.getCount());
 hexagram2.getHexagram();
@@ -109,13 +105,6 @@ int value = setValue();
 
 public Line(){
 }
-/*
-public Line(boolean t, boolean c, int v){
-t = tao;
-c = changing;
-v = value;
-}
-*/
 
 private static int setValue(){
 int value = (int)(Math.random() * 4 + 6);
@@ -157,7 +146,7 @@ int change(){//method for changing value of number if changing line
 		value = 7; //solid
 	}
 	if(value == 9){ //changing solid
-		value = 8;//broken
+		value = 8;//broken
 	}
 	if(value == 7){
 		value = 7;
@@ -171,8 +160,6 @@ return value;
 
 void getLine(boolean t, boolean c)
 {
-//getTao();
-//getChanging();
 t = tao;
 c = changing;
 setLine(value);
